@@ -1,0 +1,96 @@
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+.venv/
+venv/
+*.sqlite3
+
+# Virtual Environment
+.env
+.venv
+ENV/
+env.bak/
+venv.bak/
+
+# pytest
+.cache/
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Pydantic/migrations
+__pydantic_model_cache__/
+
+# === NODE.JS / EXPRESS ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Logs
+*.log
+
+# === Docker / Kubernetes ===
+*.tar
+*.img
+docker-compose.override.yml
+.env.docker
+
+# === Git ===
+*.orig
+*.swp
+*.swo
+*.swn
+*.rej
+*.bak
+*.tmp
+
+# === macOS ===
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# === IDEs / Editors ===
+# VSCode
+.vscode/
+.history/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === Database Dumps ===
+*.sqlite
+*.db
+*.sql
+*.dump
+
+# === Misc ===
+# Ignore compiled shared objects
+*.so
+# Ignore zip files generated
+*.zip
+# Ignore system files
+Thumbs.db
+ehthumbs.db
