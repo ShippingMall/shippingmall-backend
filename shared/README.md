@@ -1,1 +1,1 @@
-// Placeholder for README.md
+# Shared Resources

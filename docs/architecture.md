@@ -1,1 +1,1 @@
-// Placeholder for architecture.md
+# Architecture

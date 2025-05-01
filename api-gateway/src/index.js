@@ -1,1 +1,1 @@
-// Placeholder for index.js
+// Entry point for API Gateway

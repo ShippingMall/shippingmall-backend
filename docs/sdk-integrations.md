@@ -1,1 +1,1 @@
-// Placeholder for sdk-integrations.md
+# SDK Integrations

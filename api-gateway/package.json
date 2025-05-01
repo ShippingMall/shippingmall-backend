@@ -1,1 +1,4 @@
-// Placeholder for package.json
+{
+  "name": "api-gateway",
+  "version": "1.0.0"
+}
