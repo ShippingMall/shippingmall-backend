@@ -1,3 +1,12 @@
+from fastapi import FastAPI
+from app.routes import shipment
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "ShippingMall Logistics API is live"}
+
 from datetime import datetime, timedelta
 from typing import Optional
 
@@ -7,7 +16,7 @@ from jose import JWTError, jwt
 
 # App instance
 app = FastAPI()
-
+app.include_router(shipment.router, prefix="/shipments", tags=["Shipments"])
 # Secret and config
 SECRET_KEY = "shippingmall-secret-key"
 ALGORITHM = "HS256"
