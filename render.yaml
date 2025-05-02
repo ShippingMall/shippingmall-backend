@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: shippingmall-backend
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r logistics-engine/requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
+    workingDir: logistics-engine
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: shippingmall-db
+          property: connectionString
+
+databases:
+  - name: shippingmall-db
+    databaseName: shippingmall
+    user: atonunoo
+    plan: free
