@@ -1,0 +1,47 @@
+name: 🚀 ShippingMall Logistics CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend-ci:
+    name: 🔍 Lint, Type Check & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v3
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r logistics-engine/requirements.txt
+          pip install -r logistics-engine/requirements-dev.txt
+
+      - name: 🧹 Lint with flake8
+        run: |
+          cd logistics-engine
+          flake8 .
+
+      - name: 🎨 Format check with black
+        run: |
+          cd logistics-engine
+          black --check .
+
+      - name: 🔎 Type check with mypy
+        run: |
+          cd logistics-engine
+          mypy .
+
+      - name: ✅ Run unit tests
+        run: |
+          cd logistics-engine
+          pytest
